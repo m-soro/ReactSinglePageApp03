@@ -66,6 +66,9 @@ button:hover {
 .ProjectCard {
   width: 500px;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .StackBox > button {
@@ -139,6 +142,17 @@ li[role="list"] > a::after {
   display: flex;
   justify-content: space-between;
   font-size: smaller;
+}
+
+.ProjectDetail swiper-container {
+  max-width: 650px;
+  height: auto;
+}
+
+.ProjectSwiperContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /***===== END PROJECT PAGE =====***/

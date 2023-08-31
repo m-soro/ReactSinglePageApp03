@@ -80,15 +80,17 @@ export default function Project() {
 
           <br />
           <p>{project.summary}</p>
-          <swiper-container
-            slides-per-view="1"
-            loop="true"
-            css-mode="true"
-            navigation="true"
-            pagination="true"
-          >
-            {project.images ? getImages() : <div></div>}
-          </swiper-container>
+          <div className="ProjectSwiperContainer">
+            <swiper-container
+              slides-per-view="1"
+              loop="true"
+              css-mode="true"
+              navigation="true"
+              pagination="true"
+            >
+              {project.images ? getImages() : <div></div>}
+            </swiper-container>
+          </div>
         </section>
 
         <section>
