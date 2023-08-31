@@ -75,7 +75,10 @@ export default function Project() {
           <div className="ProjectNavButtons">
             <button className="RepoLink outline">
               <a href={project.repolink}>
-                <img src="src/assets/images/gh-white-logo.png" alt="" />
+                <img
+                  src="https://github.com/m-soro/ReactSinglePageApp03/blob/main/src/assets/images/gh-white-logo.png?raw=true"
+                  alt="github logo"
+                />
               </a>
             </button>
 

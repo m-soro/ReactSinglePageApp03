@@ -13,7 +13,7 @@ export default function Header() {
         <nav>
           <ul>
             <li className="NameText">
-              <NavLink to="/home" end>
+              <NavLink to="/" end>
                 mark_
               </NavLink>
             </li>
@@ -46,7 +46,7 @@ export default function Header() {
           </ul>
         </nav>
         <Routes>
-          <Route exact strict path="/home" element={<Home />} />
+          <Route exact strict path="/" element={<Home />} />
           <Route exact strict path="/projects" element={<Projects />} />
           <Route path="/projects/:projectId" element={<Project />} />
           <Route exact strict path="/about" element={<About />} />
