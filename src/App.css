@@ -42,6 +42,17 @@ swiper-container::part(button-next) {
   --swiper-navigation-size: 20px;
 }
 
+button {
+  border-radius: 18px;
+  font-size: 0.9em;
+}
+
+a:hover,
+button:hover {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
 /***===== END GLOBAL STYLE =====***/
 
 /***===== PROJECT*S* PAGE =====***/
@@ -72,6 +83,7 @@ swiper-container::part(button-next) {
 /***===== HEADER =====***/
 .Header .active {
   color: aqua;
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .NameText {
@@ -91,14 +103,6 @@ li[role="list"] > a::after {
   height: 0;
   visibility: hidden;
 }
-
-/* details summary::after {
-  transform: rotate(0);
-}
-
-details[open] > summary::after {
-  transform: rotate(180deg);
-} */
 
 /***===== END HEADER =====***/
 
