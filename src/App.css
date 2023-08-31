@@ -85,13 +85,21 @@ nav {
   height: 8em;
 }
 
-details summary::after {
+details[role="list"] summary::after,
+li[role="list"] > a::after {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+/* details summary::after {
   transform: rotate(0);
 }
 
 details[open] > summary::after {
   transform: rotate(180deg);
-}
+} */
+
 /***===== END HEADER =====***/
 
 /***===== PROJECT PAGE =====***/
@@ -107,20 +115,18 @@ details[open] > summary::after {
   width: 4.5em;
 }
 
+.DemoButton,
 .BackToProjects {
-  font-size: 1.5em;
-  padding: 0;
-  margin: 0;
-  width: 1.8em;
-  height: 1.8em;
-  transform: rotate(270deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
 .ProjectNavButtons {
   height: auto;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
 }
 
 /***===== END PROJECT PAGE =====***/

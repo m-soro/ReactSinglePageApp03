@@ -35,10 +35,7 @@ export default function Project() {
 
   const getImages = () => {
     return project.images.map((image, index) => (
-      <swiper-slide
-        key={index}
-        // style={{ display: "flex", justifyContent: "center" }}
-      >
+      <swiper-slide key={index}>
         <img src={image} alt={project.projectName} />
       </swiper-slide>
     ));
@@ -73,6 +70,9 @@ export default function Project() {
           <p>{project.stack}</p>
 
           <div className="ProjectNavButtons">
+            <button className="outline DemoButton">
+              <Link to="/projects">demo</Link>
+            </button>
             <button className="RepoLink outline">
               <a href={project.repolink}>
                 <img
@@ -83,7 +83,7 @@ export default function Project() {
             </button>
 
             <button className="outline BackToProjects">
-              <Link to="/projects">&#x2303;</Link>
+              <Link to="/projects">back</Link>
             </button>
           </div>
         </section>

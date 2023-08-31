@@ -5,8 +5,11 @@ import About from "/src/pages/About";
 import Resume from "/src/pages/Resume";
 import Contact from "/src/pages/Contact";
 import Project from "/src/pages/Project";
+import { useState } from "react";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <HashRouter>
       <div className="Header">
@@ -21,8 +24,16 @@ export default function Header() {
           <ul>
             <li>
               <details role="list" dir="rtl">
-                <summary aria-haspopup="listbox" role="link">
-                  Menu
+                <summary
+                  aria-haspopup="listbox"
+                  role="link"
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                >
+                  <span className="material-symbols-outlined">
+                    {isOpen ? "menu_open" : "menu"}
+                  </span>
                 </summary>
                 <ul role="listbox">
                   <li>
