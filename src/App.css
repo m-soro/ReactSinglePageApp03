@@ -115,10 +115,6 @@ li[role="list"] > a::after {
   padding-left: 0.5em;
 }
 
-.RepoLink {
-  width: 4.5em;
-}
-
 .DemoButton,
 .BackToProjects {
   display: flex;
@@ -128,9 +124,21 @@ li[role="list"] > a::after {
 }
 
 .ProjectNavButtons {
-  height: auto;
+  margin-top: 4em;
   display: flex;
   justify-content: space-between;
+}
+
+.ProjectDates > span,
+.ProjectDates > p {
+  color: var(--muted-color);
+  font-size: smaller;
+}
+
+.ProjectDates {
+  display: flex;
+  justify-content: space-between;
+  font-size: smaller;
 }
 
 /***===== END PROJECT PAGE =====***/

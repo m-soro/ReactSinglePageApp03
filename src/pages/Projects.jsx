@@ -7,7 +7,6 @@ export default function Projects() {
   return (
     <div className="Projects">
       <h2>Projects</h2>
-
       <div className="ProjectContainer">
         {ProjectData.map((project) => (
           <article className="ProjectCard" key={project.id}>
@@ -38,7 +37,7 @@ export default function Projects() {
               </div>
 
               <button className="outline">
-                <Link to={`/projects/${project.id}`}>more info</Link>
+                <Link to={`/projects/${project.id}`}>more</Link>
               </button>
             </footer>
           </article>

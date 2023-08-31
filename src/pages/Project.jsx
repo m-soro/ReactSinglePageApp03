@@ -3,7 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import { ProjectData } from "/src/assets/myFiles/ProjectData.jsx";
 
 export default function Project() {
-  const [project, setProject] = useState({});
+  const [project, setProject] = useState("");
+  const [created, setCreated] = useState("");
+  const [updated, setUpdated] = useState("");
 
   const params = useParams();
   const projectId = params.projectId;
@@ -18,6 +20,8 @@ export default function Project() {
 
   useEffect(() => {
     setProject(getProject());
+    setCreated(getData());
+    setUpdated(getData());
   }, [project]);
 
   const getBullets = () => {
@@ -40,11 +44,40 @@ export default function Project() {
     ));
   };
 
+  const getData = async () => {
+    try {
+      const response = await fetch(project.repoAPI);
+      const json = await response.json();
+      const [createdAt, updatedAt] = [json.created_at, json.updated_at];
+      setCreated(createdAt);
+      setUpdated(updatedAt);
+      console.log(createdAt, updatedAt);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const createElement = (label, data) => {
+    const timestamp = Date.parse(data);
+    const date = new Date(timestamp);
+    const formattedDate = `${date.toDateString().substring(4)}`;
+    return (
+      <p>
+        {label} {formattedDate}
+      </p>
+    );
+  };
+
   return (
     <div className="ProjectDetail">
       <article>
         <section>
           <h1>{project.projectName}</h1>
+          <div className="ProjectDates">
+            {created ? createElement("created: ", created) : <p></p>}
+            {updated ? createElement("updated: ", updated) : <p></p>}
+          </div>
+
           <br />
           <p>{project.summary}</p>
           <swiper-container
@@ -57,32 +90,25 @@ export default function Project() {
             {project.images ? getImages() : <div></div>}
           </swiper-container>
         </section>
+
         <section>
           {project.projectBullets ? <ul>{getBullets()}</ul> : <div></div>}
         </section>
-
         <section>
           <h4>More detail</h4>
           <br />
           {project.moreDetail ? getMoreDetails() : <div></div>}
+
           <h4>Built with</h4>
           <p>{project.stack}</p>
+          <a href={project.repoLink}>GitHub Repo</a>
 
           <div className="ProjectNavButtons">
-            <button className="outline DemoButton">
-              <Link to="/projects">demo</Link>
-            </button>
-            <button className="RepoLink outline">
-              <a href={project.repolink}>
-                <img
-                  src="https://github.com/m-soro/ReactSinglePageApp03/blob/main/src/assets/images/gh-white-logo.png?raw=true"
-                  alt="github logo"
-                />
-              </a>
-            </button>
-
             <button className="outline BackToProjects">
               <Link to="/projects">back</Link>
+            </button>
+            <button className="outline DemoButton">
+              <a href={project.demoLink}>demo</a>
             </button>
           </div>
         </section>
