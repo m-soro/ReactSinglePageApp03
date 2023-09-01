@@ -229,7 +229,8 @@ li[role="list"] > a::after {
     height: auto;
   }
 
-  .TechIcons {
+  .TechIcons,
+  .TechStack img {
     width: 35px;
     height: auto;
     margin-left: 5px;
