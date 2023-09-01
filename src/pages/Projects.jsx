@@ -32,8 +32,13 @@ export default function Projects() {
               </div>
             </div>
             <footer className="StackBox">
-              <div className="RepoInfoDiv">
-                <h6>{project.stack}</h6>
+              <div className="TechStack">
+                <hgroup>
+                  <p>built with</p>
+                  {project.stack.map((icon, index) => {
+                    return <img src={icon} alt="tech-icon" key={index} />;
+                  })}
+                </hgroup>
               </div>
 
               <button className="outline">

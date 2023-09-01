@@ -1,3 +1,7 @@
+// github icons - https://github.com/m-soro/icons/blob/main/js01-64.png?raw=true
+let url = `https://github.com/m-soro/icons/blob/main/`;
+let ext = `.png?raw=true`;
+
 export const ProjectData = [
   {
     id: 1,
@@ -18,7 +22,14 @@ export const ProjectData = [
       `This is a collision based game. I started with researching how other developers did this and wrote this based in my understanding.`,
       `I faced many challenges in back end and front end. Mostly it was referencing variables.`,
     ],
-    stack: "Javascript, HTML, CSS",
+    stack: [
+      `${url}js01-64${ext}`,
+      `${url}python01-64${ext}`,
+      `${url}sql02-64${ext}`,
+      `${url}react02-64${ext}`,
+      `${url}js01-64${ext}`,
+      `${url}python01-64${ext}`,
+    ],
     demoLink: "https://m-soro.github.io/Project_1/",
     repoLink: "https://github.com/m-soro/Project_1",
     repoAPI: "https://api.github.com/repos/m-soro/Project_1",
@@ -50,7 +61,12 @@ export const ProjectData = [
     Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
       `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
     ],
-    stack: "Lorem ipsum lorem ipsum",
+    stack: [
+      `${url}js01-64${ext}`,
+      `${url}python01-64${ext}`,
+      `${url}sql02-64${ext}`,
+      `${url}react02-64${ext}`,
+    ],
     demoLink: "https://m-soro.github.io/o_cans/",
     repoLink: "https://github.com/m-soro/o_cans",
     repoAPI: "https://api.github.com/repos/m-soro/o_cans",
@@ -86,7 +102,12 @@ export const ProjectData = [
     Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
       `Lorem ipsum dolor sit amet consectetur adipisicing elit.`,
     ],
-    stack: "Lorem ipsum lorem ipsum",
+    stack: [
+      `${url}js01-64${ext}`,
+      `${url}python01-64${ext}`,
+      `${url}sql02-64${ext}`,
+      `${url}react02-64${ext}`,
+    ],
     demoLink: "https://m-soro.github.io/Project_1/",
     repoLink: "https://github.com/m-soro/Project_1",
     repoAPI: "https://api.github.com/repos/m-soro/Project_1",

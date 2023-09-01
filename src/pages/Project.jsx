@@ -44,6 +44,12 @@ export default function Project() {
     ));
   };
 
+  const getIcons = () => {
+    return project.stack.map((icon, index) => (
+      <img src={icon} alt="tech-icon" key={index} className="TechIcons" />
+    ));
+  };
+
   const getData = async () => {
     try {
       const response = await fetch(project.repoAPI);
@@ -51,7 +57,6 @@ export default function Project() {
       const [createdAt, updatedAt] = [json.created_at, json.updated_at];
       setCreated(createdAt);
       setUpdated(updatedAt);
-      console.log(createdAt, updatedAt);
     } catch (error) {
       console.log(error);
     }
@@ -97,14 +102,18 @@ export default function Project() {
           {project.projectBullets ? <ul>{getBullets()}</ul> : <div></div>}
         </section>
         <section>
-          <h4>More detail</h4>
+          <h4>About</h4>
           <br />
-          {project.moreDetail ? getMoreDetails() : <div></div>}
-
-          <h4>Built with</h4>
-          <p>{project.stack}</p>
-          <a href={project.repoLink}>GitHub Repo</a>
-
+          <hgroup>
+            {project.moreDetail ? <div>{getMoreDetails()}</div> : <div></div>}
+            <a href={project.repoLink}>GitHub Repo</a>
+            <p></p>
+          </hgroup>
+          <hgroup>
+            <h4>Built with</h4>
+            <br />
+            {project.stack ? getIcons() : <div></div>}
+          </hgroup>
           <div className="ProjectNavButtons">
             <button className="outline BackToProjects">
               <Link to="/projects">back</Link>
