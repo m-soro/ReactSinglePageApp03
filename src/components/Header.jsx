@@ -57,12 +57,12 @@ export default function Header() {
           </ul>
         </nav>
         <Routes>
-          <Route exact strict path="/" element={<Home />} />
-          <Route exact strict path="/projects" element={<Projects />} />
-          <Route path="/projects/:projectId" element={<Project />} />
-          <Route exact strict path="/about" element={<About />} />
-          <Route exact strict path="/resume" element={<Resume />} />
-          <Route exact strict path="/contact" element={<Contact />} />
+          <Route exact strict path="/" element={<Home />} end />
+          <Route exact strict path="/projects" element={<Projects />} end />
+          <Route path="/projects/:projectId" element={<Project />} end />
+          <Route exact strict path="/about" element={<About />} end />
+          <Route exact strict path="/resume" element={<Resume />} end />
+          <Route exact strict path="/contact" element={<Contact />} end />
         </Routes>
       </div>
     </HashRouter>
