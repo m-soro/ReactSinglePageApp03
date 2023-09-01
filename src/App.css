@@ -207,7 +207,7 @@ li[role="list"] > a::after {
   }
 
   .ProjectDetail swiper-container {
-    width: auto;
+    width: 100%;
     height: auto;
   }
 }
