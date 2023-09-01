@@ -96,7 +96,8 @@ button:hover {
 /***===== END PROJECT*S* PAGE =====***/
 
 /***===== HEADER =====***/
-.Header .active {
+.Header .active,
+.ProjectsName:hover {
   color: aqua;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }

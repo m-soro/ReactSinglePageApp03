@@ -82,6 +82,7 @@ export default function Project() {
             {created ? createElement("created: ", created) : <p></p>}
             {updated ? createElement("updated: ", updated) : <p></p>}
           </div>
+          <hr />
 
           <br />
           <p>{project.summary}</p>

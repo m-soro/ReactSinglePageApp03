@@ -11,7 +11,9 @@ export default function Projects() {
         {ProjectData.map((project) => (
           <article className="ProjectCard" key={project.id}>
             <header>
-              <h4>{project.projectName}</h4>
+              <Link to={`/projects/${project.id}`}>
+                <h4 className="ProjectsName">{project.projectName}</h4>
+              </Link>
             </header>
             <div className="container-fluid">
               <swiper-container
