@@ -3,7 +3,7 @@ export const ProjectData = [
     id: 1,
     projectName: "PONG!",
     images: [
-      "src/assets/images/pong01.png",
+      "https://github.com/m-soro/ReactSinglePageApp03/blob/main/src/assets/images/pong01.png?raw=true",
       "https://github.com/m-soro/Project_1/blob/main/image/pong-logo.jpeg?raw=true",
       "https://github.com/m-soro/Project_1/raw/main/image/demo-big-screen.gif?raw=true",
     ],
